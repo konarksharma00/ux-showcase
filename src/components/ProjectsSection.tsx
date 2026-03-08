@@ -51,7 +51,7 @@ const ProjectsSection = () => {
             >
               {/* Thumbnail placeholder */}
               <div className={`h-48 bg-muted/30 flex items-center justify-center relative overflow-hidden`}>
-                <div className={`absolute inset-0 bg-gradient-to-br from-${project.color}/20 to-transparent`} />
+                <div className={`absolute inset-0 bg-gradient-to-br from-${project.color}/20 to-transparent shadow-[inset_0_0_60px_hsl(var(--primary)/0.15)]`} />
                 <span className="font-display text-6xl font-bold text-muted-foreground/20 select-none">
                   0{i + 1}
                 </span>
