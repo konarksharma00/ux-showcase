@@ -121,7 +121,8 @@
       hsl(var(--coral)) 355deg,
       transparent 360deg
     );
-    animation: spin-glow 8s linear infinite;
+    animation: spin-glow var(--glow-duration, 8s) linear infinite;
+    animation-delay: var(--glow-delay, 0s);
     filter: blur(1px);
   }
 
