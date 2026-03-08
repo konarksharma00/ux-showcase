@@ -140,7 +140,7 @@
       hsl(var(--cyan) / 0.3) 350deg,
       transparent 360deg
     );
-    animation: spin-glow 4s linear infinite;
+    animation: spin-glow 8s linear infinite;
     filter: blur(12px);
   }
 
