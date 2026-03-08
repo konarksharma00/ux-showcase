@@ -40,14 +40,25 @@ const AboutSection = () => {
           <div className="space-y-10">
             {/* Stats grid */}
             <div className="grid grid-cols-2 gap-6">
-              {stats.map((stat) => (
-                <div key={stat.label} className="glow-border p-[2px]">
-                  <div className="bg-gradient-card rounded-[18%] p-6 text-center h-full">
-                    <p className="font-display text-3xl md:text-4xl font-bold text-gradient mb-1">{stat.value}</p>
-                    <p className="text-sm text-muted-foreground">{stat.label}</p>
+              {stats.map((stat, i) => {
+                const delays = ['0s', '-2s', '-4.5s', '-6.5s'];
+                const durations = ['8s', '10s', '7s', '9s'];
+                return (
+                  <div
+                    key={stat.label}
+                    className="glow-border p-[2px]"
+                    style={{
+                      '--glow-duration': durations[i],
+                      '--glow-delay': delays[i],
+                    } as React.CSSProperties}
+                  >
+                    <div className="bg-gradient-card rounded-[18%] p-6 text-center h-full">
+                      <p className="font-display text-3xl md:text-4xl font-bold text-gradient mb-1">{stat.value}</p>
+                      <p className="text-sm text-muted-foreground">{stat.label}</p>
+                    </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
 
             {/* Tools */}
