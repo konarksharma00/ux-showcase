@@ -113,12 +113,35 @@
     width: 200%;
     height: 200%;
     background: conic-gradient(
-      hsl(var(--electric)),
-      hsl(var(--coral)),
-      hsl(var(--cyan)),
-      hsl(var(--electric))
+      from 0deg,
+      transparent 0deg,
+      transparent 300deg,
+      hsl(var(--electric)) 330deg,
+      hsl(var(--cyan)) 345deg,
+      hsl(var(--coral)) 355deg,
+      transparent 360deg
     );
-    animation: spin-glow 3s linear infinite;
+    animation: spin-glow 4s linear infinite;
+    filter: blur(1px);
+  }
+
+  .glow-border::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+      from 0deg,
+      transparent 0deg,
+      transparent 310deg,
+      hsl(var(--electric) / 0.4) 335deg,
+      hsl(var(--cyan) / 0.3) 350deg,
+      transparent 360deg
+    );
+    animation: spin-glow 4s linear infinite;
+    filter: blur(12px);
   }
 
   .glow-border > * {
