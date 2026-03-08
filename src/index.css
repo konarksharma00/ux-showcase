@@ -98,4 +98,36 @@
   .glow-cyan {
     box-shadow: 0 0 40px hsl(var(--cyan) / 0.3), 0 0 80px hsl(var(--cyan) / 0.1);
   }
+
+  .glow-border {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20%;
+  }
+
+  .glow-border::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+      hsl(var(--electric)),
+      hsl(var(--coral)),
+      hsl(var(--cyan)),
+      hsl(var(--electric))
+    );
+    animation: spin-glow 3s linear infinite;
+  }
+
+  .glow-border > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@keyframes spin-glow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

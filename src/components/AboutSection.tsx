@@ -41,9 +41,11 @@ const AboutSection = () => {
             {/* Stats grid */}
             <div className="grid grid-cols-2 gap-6">
               {stats.map((stat) => (
-                <div key={stat.label} className="bg-gradient-card rounded-xl p-6 border border-border text-center">
-                  <p className="font-display text-3xl md:text-4xl font-bold text-gradient mb-1">{stat.value}</p>
-                  <p className="text-sm text-muted-foreground">{stat.label}</p>
+                <div key={stat.label} className="glow-border p-[2px]">
+                  <div className="bg-gradient-card rounded-[18%] p-6 text-center h-full">
+                    <p className="font-display text-3xl md:text-4xl font-bold text-gradient mb-1">{stat.value}</p>
+                    <p className="text-sm text-muted-foreground">{stat.label}</p>
+                  </div>
                 </div>
               ))}
             </div>
