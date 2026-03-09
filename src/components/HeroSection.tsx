@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import rahulPhoto from "@/assets/rahul-photo.png";
 
 const HeroSection = () => {
   return (
@@ -13,7 +14,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 md:px-8 relative z-10 text-center">
         <div className="flex justify-center mb-8 opacity-0 animate-fade-in-up">
           <Avatar className="w-32 h-32 md:w-40 md:h-40 border-4 border-primary/50 glow-primary">
-            <AvatarImage src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" alt="Rahul Sharma" />
+            <AvatarImage src={rahulPhoto} alt="Rahul Sharma" />
             <AvatarFallback className="text-3xl font-display font-bold bg-muted text-foreground">RS</AvatarFallback>
           </Avatar>
         </div>
