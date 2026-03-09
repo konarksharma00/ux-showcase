@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import rahulPhoto from "@/assets/rahul-photo.png";
 
 const HeroSection = () => {
   return (
