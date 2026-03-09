@@ -64,6 +64,21 @@ This project is built with:
 
 Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
 
+## Deploy on GitHub Pages
+
+This project is now configured for GitHub Pages deployment using GitHub Actions.
+
+1. Push your code to GitHub.
+2. In your repo, open `Settings -> Pages`.
+3. Under `Build and deployment`, set `Source` to `GitHub Actions`.
+4. Push to `main` (or `master`) to trigger `.github/workflows/deploy.yml`.
+5. After the workflow succeeds, your site will be available at:
+	- `https://<your-username>.github.io/<your-repo>/`
+
+Notes:
+- Routing is configured with `HashRouter` to avoid 404 refresh issues on GitHub Pages.
+- Vite `base` is set to `./` so static assets load correctly from repo subpaths.
+
 ## Can I connect a custom domain to my Lovable project?
 
 Yes, you can!

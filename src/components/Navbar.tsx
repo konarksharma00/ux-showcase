@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Download } from "lucide-react";
 
+const resumePath = `${import.meta.env.BASE_URL}Rahul_sharma_Profile.pdf`;
+
 const navLinks = [
   { label: "About", href: "#about" },
   { label: "Projects", href: "#projects" },
@@ -42,7 +44,7 @@ const Navbar = () => {
             </a>
           ))}
           <Button asChild size="sm" className="bg-primary hover:bg-primary/80 gap-2">
-            <a href="/Rahul_sharma_Profile.pdf" download>
+            <a href={resumePath} download>
               <Download className="w-4 h-4" />
               Resume
             </a>
@@ -73,7 +75,7 @@ const Navbar = () => {
             </a>
           ))}
           <Button asChild size="sm" className="mt-2 w-full bg-primary hover:bg-primary/80 gap-2">
-            <a href="/Rahul_sharma_Profile.pdf" download>
+            <a href={resumePath} download>
               <Download className="w-4 h-4" />
               Resume
             </a>
