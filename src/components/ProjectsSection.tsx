@@ -1,6 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowUpRight } from "lucide-react";
+import maayariThumb from "@/assets/maayari-thumb.jpg";
+import melodicmindThumb from "@/assets/melodicmind-thumb.png";
 
 const projects = [
   {
