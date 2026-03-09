@@ -48,9 +48,9 @@ const ProjectsSection = () => {
 
         <div className="grid md:grid-cols-3 gap-8">
           {projects.map((project, i) => (
+            <a key={project.title} href={project.link} target="_blank" rel="noopener noreferrer" className="block">
             <Card
-              key={project.title}
-              className={`group bg-gradient-card border-border hover:border-${project.color}/40 transition-all duration-500 hover:-translate-y-2 overflow-hidden shadow-none hover:shadow-[0_0_50px_hsl(var(--primary)/0.2),0_0_100px_hsl(var(--primary)/0.1)]`}
+              className={`group bg-gradient-card border-border hover:border-${project.color}/40 transition-all duration-500 hover:-translate-y-2 overflow-hidden shadow-none hover:shadow-[0_0_50px_hsl(var(--primary)/0.2),0_0_100px_hsl(var(--primary)/0.1)] cursor-pointer`}
             >
               {/* Thumbnail placeholder */}
               <div className={`h-48 bg-muted/30 flex items-center justify-center relative overflow-hidden`}>
