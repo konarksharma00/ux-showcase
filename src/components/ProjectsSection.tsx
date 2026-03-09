@@ -31,6 +31,7 @@ const projects = [
     title: "Paul Davids Guitar",
     client: "Paul Davids",
     link: "https://pauldavidsguitar.com",
+    thumbnail: "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=800&q=80",
     description: "Created an intuitive, easy-to-navigate e-commerce website for a personalised guitar brand — making product discovery and purchasing effortless for customers.",
     role: "UX/UI Designer",
     deliverables: ["Information Architecture", "UI Design", "Usability Testing", "E-commerce UX"],
