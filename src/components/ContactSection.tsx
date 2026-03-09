@@ -38,7 +38,7 @@ const ContactSection = () => {
 
             <div className="space-y-5">
               <a
-                href="mailto:jane.doe@email.com"
+                href="mailto:pkrahul.sharma123@gmail.com"
                 className="flex items-center gap-4 text-foreground hover:text-primary transition-colors group"
               >
                 <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
@@ -46,12 +46,12 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="text-xs text-muted-foreground">Email</p>
-                  <p className="font-medium">jane.doe@email.com</p>
+                  <p className="font-medium">pkrahul.sharma123@gmail.com</p>
                 </div>
               </a>
 
               <a
-                href="tel:+1234567890"
+                href="tel:+61433973804"
                 className="flex items-center gap-4 text-foreground hover:text-primary transition-colors group"
               >
                 <div className="w-11 h-11 rounded-lg bg-coral/10 flex items-center justify-center group-hover:bg-coral/20 transition-colors">
@@ -59,12 +59,14 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="text-xs text-muted-foreground">Phone</p>
-                  <p className="font-medium">+1 (234) 567-890</p>
+                  <p className="font-medium">+61 433 973 804</p>
                 </div>
               </a>
 
               <a
-                href="#"
+                href="https://www.linkedin.com/in/rahulsharma12/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-4 text-foreground hover:text-primary transition-colors group"
               >
                 <div className="w-11 h-11 rounded-lg bg-cyan/10 flex items-center justify-center group-hover:bg-cyan/20 transition-colors">
@@ -72,20 +74,22 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="text-xs text-muted-foreground">LinkedIn</p>
-                  <p className="font-medium">linkedin.com/in/janedoe</p>
+                  <p className="font-medium">linkedin.com/in/rahulsharma12</p>
                 </div>
               </a>
 
               <a
-                href="#"
+                href="https://www.seek.com.au/profile/rahul-sharma"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-4 text-foreground hover:text-primary transition-colors group"
               >
                 <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                   <Globe className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <p className="text-xs text-muted-foreground">Dribbble</p>
-                  <p className="font-medium">dribbble.com/janedoe</p>
+                  <p className="text-xs text-muted-foreground">Seek</p>
+                  <p className="font-medium">Seek Profile</p>
                 </div>
               </a>
             </div>
