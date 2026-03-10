@@ -1,14 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, type MouseEvent } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Download } from "lucide-react";
 
 const resumePath = `${import.meta.env.BASE_URL}Rahul_sharma_Profile.pdf`;
 
 const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Projects", href: "#projects" },
-  { label: "Services", href: "#services" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", sectionId: "about" },
+  { label: "Projects", sectionId: "projects" },
+  { label: "Services", sectionId: "services" },
+  { label: "Contact", sectionId: "contact" },
 ];
 
 const Navbar = () => {
@@ -21,6 +21,20 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const scrollToSection = (sectionId: string) => (event: MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    const section = document.getElementById(sectionId);
+
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
+  const scrollToTop = (event: MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -28,7 +42,7 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-4 md:px-8">
-        <a href="#" className="font-display text-xl font-bold text-gradient">
+        <a href="#" onClick={scrollToTop} className="font-display text-xl font-bold text-gradient">
           RS.
         </a>
 
@@ -36,8 +50,9 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
-              key={link.href}
-              href={link.href}
+              key={link.sectionId}
+              href={`#${link.sectionId}`}
+              onClick={scrollToSection(link.sectionId)}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               {link.label}
@@ -66,9 +81,12 @@ const Navbar = () => {
         <div className="md:hidden bg-background/95 backdrop-blur-md border-b border-border px-4 pb-6">
           {navLinks.map((link) => (
             <a
-              key={link.href}
-              href={link.href}
-              onClick={() => setMobileOpen(false)}
+              key={link.sectionId}
+              href={`#${link.sectionId}`}
+              onClick={(event) => {
+                scrollToSection(link.sectionId)(event);
+                setMobileOpen(false);
+              }}
               className="block py-3 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               {link.label}
